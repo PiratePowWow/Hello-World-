@@ -64,8 +64,15 @@ public class Person {
         address = newAddress;
     }
 
-    public boolean isValidName(String name) {
+    public static boolean isValidName(String name) {
         return name.contains(" ");
     }
-
+    //STATIC
+    //Person --> P1 = new Person(), P2 = new Person(), P3 = new Person() etc
+    //Blueprint housename = new Blueprint
+    //
+    //public static
+    //static fields are a shared value across a class
+    //System.out is a static field for class System
+    //Static methods can be called without a class object by using syntax Class.method(args)
 }
