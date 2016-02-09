@@ -68,9 +68,16 @@ public class Person {
         return name.contains(" ");
     }
 
-
-
-    //STATIC
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", isAlive=" + isAlive +
+                ", address='" + address + '\'' +
+                '}';
+    }
+//STATIC
     //Person --> P1 = new Person(), P2 = new Person(), P3 = new Person() etc
     //Blueprint housename = new Blueprint
     //
