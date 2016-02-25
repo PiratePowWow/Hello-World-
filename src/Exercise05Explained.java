@@ -10,10 +10,19 @@ import java.util.stream.Collectors;
  */
 public class Exercise05Explained {
     public static void main(String[] args) {
+        //Return list containing only the names that start with "A", converted to uppercase, and only look at the first 5 names
         String[] names = {"alice", "bob", "charlie", "andrew", "edward", "alex"};
         ArrayList<String> newNames = new ArrayList<>(Arrays.asList(names));
         newNames = new ArrayList<>(newNames.subList(0, 5));
+
+
+        //methods used to solve
         StopWatch stopwatch = new StopWatch();
+        stopwatch.start("stream");
+        solveViaStream(newNames);
+        stopwatch.stop();
+        System.out.println(stopwatch);
+        stopwatch = new StopWatch();
         stopwatch.start("direct");
         solveViaDirectModification(newNames);
         stopwatch.stop();
@@ -23,11 +32,7 @@ public class Exercise05Explained {
         solveViaTempLists(newNames);
         stopwatch.stop();
         System.out.println(stopwatch);
-        stopwatch = new StopWatch();
-        stopwatch.start("stream");
-        solveViaStream(newNames);
-        stopwatch.stop();
-        System.out.println(stopwatch);
+
 
 
     }
